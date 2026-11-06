@@ -12,8 +12,9 @@ fun describeProfile(nama: String, umur: Int?, kota: String = "Tidak diketahui"):
     // TODO 2: Kembalikan (return) satu String dengan format:
     //   "Nama: <nama>, Umur: <umurText>, Kota: <kota>"
     //   Gunakan string template ($nama, dst), bukan concatenation (+)
+    val umurText = umur?.let { "$it tahun" } ?: "umur tidak diketahui"
 
-    return ""
+    return "Nama: $nama, Umur: $umurText, Kota: $kota"
 }
 
 fun main() {
